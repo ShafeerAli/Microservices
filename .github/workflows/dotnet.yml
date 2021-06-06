@@ -18,11 +18,11 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      working-directory: ./Microservices
+      working-directory: ../src/Microservices
       run: dotnet restore 
     - name: Build
-      run: dotnet build ../src --no-restore
-      working-directory: ./Microservices
+      run: dotnet build  --no-restore
+      working-directory: ../src/Microservices
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      working-directory: ./Microservices
+      working-directory: ../src/Microservices
